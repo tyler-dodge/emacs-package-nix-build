@@ -4,7 +4,7 @@ let
   emacs = fetcher: emacsWithPackages {
       pkgs = import (builtins.fetchGit fetcher) {};
     };
- in {
+ in rec {
    emacs_27_1 = emacs {
      name = "emacs-revision-27.1";
      url = "https://github.com/NixOS/nixpkgs/";
@@ -23,4 +23,5 @@ let
      ref = "refs/heads/nixpkgs-unstable";
      rev = "b1abaab2d14493c20740de34bad772f17d1e731b";
    };
+   latest = emacs_28_1;
  }

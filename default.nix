@@ -22,5 +22,5 @@ let
 rec {
   inherit versions;
   test = create_target run_test;
-  package_lint = create_target run_test;
+  package_lint = create_target run_package_lint;
 }

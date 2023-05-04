@@ -4,6 +4,7 @@ let
   emacs_packages = (epkgs: with epkgs; [
     ert-runner
     el-mock
+    ert-async
     package-lint
   ]);
   package_lint_target = pkgs.lib.head targets;
